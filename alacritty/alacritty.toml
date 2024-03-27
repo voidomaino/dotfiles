@@ -1,0 +1,21 @@
+[font]
+size = 15
+
+[font.bold]
+family = "Sarasa Term SC Nerd"
+style = "Bold"
+
+[font.bold_italic]
+family = "Sarasa Term SC Nerd"
+style = "Bold Italic"
+
+[font.italic]
+family = "Sarasa Term SC Nerd"
+style = "Italic"
+
+[font.normal]
+family = "Sarasa Term SC Nerd"
+style = "Regular"
+
+[window]
+opacity = 0.85
