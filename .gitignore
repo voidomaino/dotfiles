@@ -2,4 +2,5 @@ pulse/*
 systemd/*
 nvim/lazy-lock.json
 fcitx5/*
+fcitx/*
 ibus/*
