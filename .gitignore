@@ -1,3 +1,7 @@
+BaiduPCS-Go/*
+calibre/*
+dconf/*
+libreoffice/*
 pulse/*
 systemd/*
 nvim/lazy-lock.json
