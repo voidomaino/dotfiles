@@ -18,8 +18,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
-export EDITOR="nvim"
-
 eval "$(starship init zsh)"
 
 function set_wayland_env
@@ -37,16 +35,16 @@ function set_wayland_env
     export _JAVA_AWT_WM_NONEREPARENTING=1 # 解决java程序启动黑屏错误
     export GDK_BACKEND="wayland,x11" # GTK后端为 wayland和x11,优先wayland
 
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+
 }
 
- function start_hyprland
+ function start_sway
  {
      set_wayland_env
-
      export XDG_SESSION_TYPE=wayland
-     export XDG_SESSION_DESKTOP=Hyprland
-     export XDG_CURRENT_DESKTOP=Hyprland
-     # 启动 Hyprland程序
-     exec Hyprland
+     exec sway
 
  }
