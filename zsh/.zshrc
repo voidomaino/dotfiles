@@ -12,14 +12,6 @@ zstyle :compinstall filename '/home/lhc/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-export ZDOTDIR="$HOME/.config/zsh"
-
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-
-eval "$(starship init zsh)"
-
 function set_wayland_env
 {
     cd ${HOME}
@@ -46,5 +38,13 @@ function set_wayland_env
      set_wayland_env
      export XDG_SESSION_TYPE=wayland
      exec sway
+
+ }
+
+ function start_hyprland
+ {
+     set_wayland_env
+     export XDG_SESSION_TYPE=wayland
+     exec Hyprland
 
  }
