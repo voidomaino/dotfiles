@@ -1,0 +1,7 @@
+#
+# ~/.bash_profile
+# Don't forget to create soft link in $HOME
+# ln -s ~/.config/bashprofile ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc

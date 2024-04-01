@@ -1,0 +1,11 @@
+#
+# ~/.xprofile
+# Don't forget to create soft link in $HOME
+# ln -s ~/.config/xprofile ~/.xprofile
+#
+
+# exec xinput set-prop "AlpsPS/2 ALPS GlidePoint" "libinput Tapping Enabled" 1
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
+
