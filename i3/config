@@ -18,6 +18,7 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id fcitx5 &
 exec --no-startup-id picom &
 exec --no-startup-id dunst &
+exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 # exec --no-startup-id copyq
 
 exec_always --no-startup-id feh --randomize --bg-fill -no-fehbg $HOME/Pictures/wallpapers/*
