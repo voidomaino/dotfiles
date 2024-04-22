@@ -1,5 +1,4 @@
 set $mod Mod4
-set $i3cfgpath ~/.config/i3
 
 font pango:Noto Sans CJK SC 8
 
@@ -14,11 +13,10 @@ bindsym $mod+o exec "rofi -modi drun,run -show drun"
 bindsym Print --release exec --no-startup-id flameshot gui
 for_window [class="flameshot"] floating enable
 
-exec --no-startup-id nm-applet &
 exec --no-startup-id fcitx5 &
 exec --no-startup-id picom &
 exec --no-startup-id dunst &
-exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+# exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 # exec --no-startup-id copyq
 
 exec_always --no-startup-id feh --randomize --bg-fill -no-fehbg $HOME/Pictures/wallpapers/*
@@ -26,6 +24,7 @@ exec_always --no-startup-id feh --randomize --bg-fill -no-fehbg $HOME/Pictures/w
 # Use pactl to adjust volume in PulseAudio.
 set $statuscmd i3status
 set $statussig SIGUSR1
+set $i3cfgpath ~/.config/i3
 set $volumestep 5
 bindsym XF86AudioRaiseVolume    exec --no-startup-id $i3cfgpath/volume -n -t $statuscmd -u $statussig up $volumestep
 bindsym XF86AudioLowerVolume    exec --no-startup-id $i3cfgpath/volume -n -t $statuscmd -u $statussig down $volumestep
@@ -59,10 +58,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-# focus the parent container
+
+# focus the parent/child container
 bindsym $mod+a focus parent
-# focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -127,6 +126,7 @@ mode "$mode_system" {
     bindsym o exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym d exec --no-startup-id systemctl poweroff -i, mode "default"
 
     bindsym Return mode "default"
