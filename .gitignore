@@ -69,3 +69,5 @@ xournalpp/*
 xsettingsd/*
 yarn/*
 zsh/.zcompdump
+ibus/*
+ventoy/Ventoy2Disk.ini
