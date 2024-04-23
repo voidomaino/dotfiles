@@ -61,6 +61,7 @@ systemd/*
 systemsettingsrc
 trashrc
 Trolltech.conf
+Typora/*
 unity3d/*
 user-dirs.dirs
 user-dirs.locale
