@@ -6,6 +6,7 @@ BaiduPCS-Go/*
 baloofilerc
 bluedevilglobalrc
 calibre/*
+calibrerc
 cef_user_data/*
 chromium/*
 dconf/*
@@ -13,6 +14,7 @@ dconf/*
 dolphinrc
 fcitx/*
 fcitx5/*
+filetypesrc
 flameshot/*
 GIMP/*
 gtk-2.0/*
@@ -47,6 +49,7 @@ neofetch/*
 nvim/lazy-lock.json
 obsidian/*
 pavucontrol.ini
+plasma*
 plasma-localerc
 plasma-org.kde.plasma.desktop-appletsrc
 plasmashellrc
@@ -59,6 +62,7 @@ QtProject.conf
 session/*
 systemd/*
 systemsettingsrc
+systemmonitorrc
 trashrc
 Trolltech.conf
 Typora/*
