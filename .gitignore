@@ -11,11 +11,15 @@ cef_user_data/*
 chromium/*
 dconf/*
 dconf/*
+device_automounter_kcmrc
+discoverrc
 dolphinrc
+draw.io/*
 fcitx/*
 fcitx5/*
 filetypesrc
 flameshot/*
+fontconfig/*
 GIMP/*
 gtk-2.0/*
 gtk-3.0/*
@@ -60,6 +64,7 @@ qBittorrent/*
 QQ/*
 QtProject.conf
 session/*
+spectaclerc
 systemd/*
 systemsettingsrc
 systemmonitorrc
@@ -72,6 +77,7 @@ user-dirs.locale
 xarchiver/*
 xournalpp/*
 xsettingsd/*
+Xmind/*
 yarn/*
 zsh/.zcompdump
 ibus/*
