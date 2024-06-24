@@ -43,10 +43,10 @@ function set_wayland_env
  # }
  # 
 
- function start_hyprland
- {
-     set_wayland_env
-     export XDG_SESSION_TYPE=wayland
-     exec Hyprland
+function start_hyprland
+{
+    set_wayland_env
+    export XDG_SESSION_TYPE=wayland
+    exec Hyprland
 
- }
+}
