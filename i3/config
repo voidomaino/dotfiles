@@ -122,7 +122,7 @@ bindsym $mod+Delete mode "$mode_system"
 mode "$mode_system" {
 
     bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym o exec --no-startup-id i3-msg exit, mode "default"
+    bindsym o exec --no-startup-id "pkill -KILL -u $USER", mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
