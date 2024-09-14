@@ -2,19 +2,19 @@
 size = 15
 
 [font.bold]
-family = "JetBrains Mono Nerd Font"
+family = "Noto Sans Mono CJK SC"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrains Mono Nerd Font"
+family = "Noto Sans Mono CJK SC"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrains Mono Nerd Font"
+family = "Noto Sans Mono CJK SC"
 style = "Italic"
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
+family = "Noto Sans Mono CJK SC"
 style = "Regular"
 
 [window]
