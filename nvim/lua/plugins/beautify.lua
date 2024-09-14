@@ -1,11 +1,11 @@
 return{
     'nvim-tree/nvim-web-devicons',
-    {
-        'folke/tokyonight.nvim',
-        lazy = false,
+    { 
+        "catppuccin/nvim", 
+        name = "catppuccin", 
         priority = 1000,
         opts = function()
-            vim.cmd[[colorscheme tokyonight]]
+            vim.cmd.colorscheme "catppuccin-latte"
         end
     },
     {
@@ -13,7 +13,7 @@ return{
         lazy = false,
         priority = 999,
         opts = function()
-            vim.cmd[[TransparentEnable]]
+            -- vim.cmd[[TransparentEnable]]
         end
     },
 }
