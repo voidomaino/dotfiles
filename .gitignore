@@ -66,6 +66,7 @@ QQ/*
 QtProject.conf
 session/*
 spectaclerc
+speech-dispatcher/*
 systemd/*
 systemsettingsrc
 systemmonitorrc
@@ -82,3 +83,4 @@ Xmind/*
 yarn/*
 ibus/*
 ventoy/Ventoy2Disk.ini
+zsh/.zcompdump*
