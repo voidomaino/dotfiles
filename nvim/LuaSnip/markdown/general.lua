@@ -28,44 +28,79 @@ local get_visual = require("luasnip-helper").get_visual
 
 return {
 
-    s({ trig = "$$", snippetType = "autosnippet" },
-    fmta(
-    [[
-    $$
-    <>
-    $$
-    ]],
-    { i(1) }
-    ),
-    { condition = line_begin }
-    ),
+    s({
+        trig = "```",
+        name = "codeblock",
+        dscr = "Insert a chunk of code",
+        hidden = "true",
+        snippetType = "autosnippet"
+    }, fmta(
+        [[
+        ```<>
+        <>
+        ```
+        ]],
+        {i(1, "code format"), i(2, "code contents")},
+        {delimeters = "<>"}
+    ), {
+        condition = line_begin
+    }),
 
-    s({ trig = "tab(%d)", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
-    fmta(
-    [[
-    <>
-    <>
-    <>
-    ]],
-    {
-        f(
-        function(_, snip)
-            return string.rep("|       ", snip.captures[1]) .. "|"
-        end
-        ),
-        f(
-        function(_, snip)
-            return string.rep("| :---: ", snip.captures[1]) .. "|"
-        end
-        ),
-        f(
-        function(_, snip)
-            return string.rep("|       ", snip.captures[1]) .. "|"
-        end
-        )
-    }
-    ),
-    { condition = line_begin }
-    )
+    s({
+        trig = "_",
+        dscr = "Set selected text to Italic format.",
+        name = "Italic form",
+        hidden = "false",
+        snippetType = "snippet"
+    }, fmta(
+        "_<>_",
+        { d(1, get_visual), }
+    )),
+
+    s({
+        trig = "__",
+        name = "Bold form",
+        dscr = "Set selected text to Bold format.",
+        hidden = "false",
+        snippetType = "snippet"
+    }, fmta(
+        "__<>__",
+        { d(1, get_visual), }
+    )),
+
+    s({
+        trig = "___",
+        name = "Bold Italic form",
+        dscr = "Set selected text to Bold Italic format.",
+        hidden = "true",
+        snippetType = "autosnippet"
+    }, fmta(
+        "___<>___",
+        { d(1, get_visual), }
+    )),
+
+    s({
+        trig = "`",
+        name = "Inline Code",
+        dscr = "Set selected text to Code format.",
+        hidden = "false",
+        snippetType = "snippet"
+    }, fmta(
+        "`<>`",
+        { d(1, get_visual), }
+    )),
+
+
+    s({
+        trig = "$$",
+        snippetType = "autosnippet"
+    }, fmta(
+        [[$$
+        <>
+        $$]],
+        { i(1) }
+    ), {
+        condition = line_begin
+    }),
 
 }
