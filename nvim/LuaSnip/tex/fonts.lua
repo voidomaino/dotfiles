@@ -72,6 +72,48 @@ return {
     }),
 
     s({
+        trig = "(%a+)_tt",
+        regTrig = true,
+        wordTrig = false,
+        snippetType = "autosnippet"
+    }, fmta(
+    [[ \mathtt{<>} ]], {
+        f(function(_, snip)
+            return snip.captures[1]
+        end)
+    }), {
+        condition = in_mathzone
+    }),
+
+    s({
+        trig = "(%a+)_sf",
+        regTrig = true,
+        wordTrig = false,
+        snippetType = "autosnippet"
+    }, fmta(
+    [[ \mathsf{<>} ]], {
+        f(function(_, snip)
+            return snip.captures[1]
+        end)
+    }), {
+        condition = in_mathzone
+    }),
+
+    s({
+        trig = "(%a+)_it",
+        regTrig = true,
+        wordTrig = false,
+        snippetType = "autosnippet"
+    }, fmta(
+    [[ \mathit{<>} ]], {
+        f(function(_, snip)
+            return snip.captures[1]
+        end)
+    }), {
+        condition = in_mathzone
+    }),
+
+    s({
         trig = "(%a+)_cl",
         regTrig = true,
         wordTrig = false,

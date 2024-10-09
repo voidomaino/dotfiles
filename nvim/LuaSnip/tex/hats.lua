@@ -30,7 +30,7 @@ local get_visual = require("luasnip-helper").get_visual
 return {
     -- INFO: hats
     s({
-        trig = "(%a)^vec",
+        trig = "([%\\{}%a]+)vec",
         regTrig = true,
         wordTrig = false,
         snippetType = "autosnippet"
